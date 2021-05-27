@@ -28,12 +28,9 @@ class MyApp extends StatelessWidget {
 }
 
 class MenuItem {
-  String name = "";
+  String name;
 
-  MenuItem(name) {
-    print('skm ??' + name);
-    this.name = name;
-  }
+  MenuItem(this.name);
 
   factory MenuItem.fromJson(Map<String, dynamic> jsObj) {
     return MenuItem(jsObj["name"]);
