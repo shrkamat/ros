@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:restos/pages/Home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,10 +20,11 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          appBar: AppBar(
+          /*appBar: AppBar(
             title: const Text('Rs'),
           ),
-          body: const HomePage(),
+          body: const HomePage(),*/
+          body: MainPage(),
         ));
   }
 }

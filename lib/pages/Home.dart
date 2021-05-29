@@ -1,28 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:restos/widgets/carousel.dart';
 import 'package:restos/widgets/classificationView.dart';
-import 'package:restos/widgets/itemsView.dart';
-
-import '../main.dart';
-
-/*void main() {
-  runApp(new MaterialApp(
-    home: MainPage(),
-    debugShowCheckedModeBanner: false,
-  ));
-}*/
 
 class MainPage extends StatelessWidget {
+  List<int> sampleList = [1, 2, 3, 4, 5];
+
   @override
   Widget build(BuildContext context) {
-    Widget image_carousel = Carousels();
+    Widget image_carousel = Carousels_image();
+
     return Scaffold(
         appBar: new AppBar(
           title: Text(
             'RESTOSOF',
           ),
-          backgroundColor: Colors.black,
         ),
         body: Column(
           children: <Widget>[
@@ -30,10 +21,10 @@ class MainPage extends StatelessWidget {
             Expanded(
                 child: ListView.builder(
               scrollDirection: Axis.vertical,
-              itemCount: 1,
+              itemCount: sampleList.length,
               shrinkWrap: true,
               itemBuilder: (context, index) {
-                return Classififations();
+                return ClassififationsView();
               },
             )),
           ],

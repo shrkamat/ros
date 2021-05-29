@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:restos/widgets/itemsView.dart';
 
-class Classififations extends StatelessWidget {
+class ClassififationsView extends StatelessWidget {
   int photoindex = 0;
   List<String> photos = [
     'assets/images/soups/veg/clearsoup.jpeg',
@@ -15,7 +14,8 @@ class Classififations extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
-      Padding(padding: EdgeInsets.only(left: 10),
+      Padding(
+          padding: EdgeInsets.only(left: 10),
           child: Container(
             height: 230.0,
             // color: Colors.grey,
@@ -25,18 +25,10 @@ class Classififations extends StatelessWidget {
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 10.0),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Items()),
-                        );
-                      },
-                      child: Container(
-                        child: Text(
-                          'SOUPS',
-                          style: TextStyle(color: Colors.black, fontSize: 20.0),
-                        ),
+                    child: Container(
+                      child: Text(
+                        'SOUPS',
+                        style: TextStyle(color: Colors.black, fontSize: 20.0),
                       ),
                     ),
                   )
