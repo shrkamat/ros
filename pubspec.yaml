@@ -60,23 +60,23 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-      - assets/api/app_page.json
-      - assets/images/rest/rest1.jpeg
-      - assets/images/rest/rest2.jpeg
-      - assets/images/rest/rest3.jpeg
-      - assets/images/rest/rest4.jpeg
-      - assets/images/rest/rest5.jpeg
-      - assets/images/soups/veg/clearsoup.jpeg
-      - assets/images/soups/veg/cornsoup.jpeg
-      - assets/images/soups/veg/manchowsoup.jpeg
-      - assets/images/soups/veg/mixed.jpeg
-      - assets/images/soups/veg/palaksoup.jpeg
-      - assets/images/soups/veg/tomatosoup.jpeg
-      - assets/images/soups/nonveg/chickennoodlessoup.jpeg
-      - assets/images/soups/nonveg/creamofchicken.jpeg
-      - assets/images/soups/nonveg/eggsoup.jpeg
-      - assets/images/soups/nonveg/manchow.jpeg
-      - assets/images/soups/nonveg/seafoodsoup.jpeg
+    - assets/api/app_page.json
+    - assets/images/rest/rest1.jpeg
+    - assets/images/rest/rest2.jpeg
+    - assets/images/rest/rest3.jpeg
+    - assets/images/rest/rest4.jpeg
+    - assets/images/rest/rest5.jpeg
+    - assets/images/soups/veg/clearsoup.jpeg
+    - assets/images/soups/veg/cornsoup.jpeg
+    - assets/images/soups/veg/manchowsoup.jpeg
+    - assets/images/soups/veg/mixed.jpeg
+    - assets/images/soups/veg/palaksoup.jpeg
+    - assets/images/soups/veg/tomatosoup.jpeg
+    - assets/images/soups/nonveg/chickennoodlessoup.jpeg
+    - assets/images/soups/nonveg/creamofchicken.jpeg
+    - assets/images/soups/nonveg/eggsoup.jpeg
+    - assets/images/soups/nonveg/manchow.jpeg
+    - assets/images/soups/nonveg/seafoodsoup.jpeg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

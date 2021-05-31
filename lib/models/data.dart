@@ -5,26 +5,36 @@ class Item {
   Item(this.name, this.img);
 }
 
-class Classifictaion {
+class Classification {
   final String name;
-  final List<Item> items;
+  final List<Item> itemList;
 
-  Classifictaion(this.name, this.items);
+  Classification(this.name, this.itemList);
 }
 
-List<Classifictaion> fetchData() {
-  var items = [
+List<Classification> fetchData() {
+  var itemsSoup = [
     Item("chicken noodles soup",
         "assets/images/soups/nonveg/chickennoodlessoup.jpeg"),
     Item("cream of chicken soup",
         "assets/images/soups/nonveg/creamofchicken.jpeg"),
-    Item("Egg Soup soup", "assets/images/soups/nonveg/eggsoup.jpeg"),
+    Item("Egg Soup", "assets/images/soups/nonveg/eggsoup.jpeg"),
     Item("Manchow soup", "assets/images/soups/nonveg/manchow.jpeg"),
+    Item("SeaFood soup", "assets/images/soups/nonveg/seafoodsoup.jpeg"),
   ];
 
-  var classifictaions = [
-    Classifictaion("SOUP", items),
+  var itemStarters = [
+    Item("chicken noodles soup",
+        "assets/images/soups/nonveg/chickennoodlessoup.jpeg"),
+    Item("cream of chicken soup",
+        "assets/images/soups/nonveg/chickennoodlessoup.jpeg"),
+    Item("Egg Soup", "assets/images/soups/nonveg/chickennoodlessoup.jpeg"),
+    Item("Manchow soup", "assets/images/soups/nonveg/manchow.jpeg"),
+    Item("SeaFood soup", "assets/images/soups/nonveg/seafoodsoup.jpeg"),
   ];
-
-  return classifictaions;
+  var classifictaionList = [
+    Classification('SOUP', itemsSoup),
+    Classification('Starters', itemStarters)
+  ];
+  return classifictaionList;
 }

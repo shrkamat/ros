@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:restos/models/data.dart';
+import 'package:restos/widgets/itemView.dart';
 
-class ClassififationsView extends StatelessWidget {
-  int photoindex = 0;
-  List<String> photos = [
-    'assets/images/soups/veg/clearsoup.jpeg',
-    'assets/images/soups/veg/cornsoup.jpeg',
-    'assets/images/soups/veg/manchowsoup.jpeg',
-    'assets/images/soups/nonveg/chickennoodlessoup.jpeg',
-    'assets/images/soups/nonveg/eggsoup.jpeg',
-    'assets/images/soups/nonveg/seafoodsoup.jpeg'
-  ];
+class ClassificationView extends StatelessWidget {
+  final Classification classification;
+
+  ClassificationView(this.classification);
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +23,8 @@ class ClassififationsView extends StatelessWidget {
                     padding: EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 10.0),
                     child: Container(
                       child: Text(
-                        'SOUPS',
-                        style: TextStyle(color: Colors.black, fontSize: 20.0),
+                        classification.name,
+                        style: TextStyle(fontSize: 20.0),
                       ),
                     ),
                   )
@@ -41,14 +37,9 @@ class ClassififationsView extends StatelessWidget {
                     child: ListView.builder(
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
-                      itemCount: photos.length,
+                      itemCount: classification.itemList.length,
                       itemBuilder: (BuildContext context, int index) {
-                        return Container(
-                          width: 140.0,
-                          child: Card(
-                            child: Image.asset(photos[index], fit: BoxFit.fill),
-                          ),
-                        );
+                        return ItemView(classification.itemList[index]);
                       },
                     ),
                   )

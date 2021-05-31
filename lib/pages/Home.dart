@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:restos/models/data.dart';
 import 'package:restos/widgets/carousel.dart';
 import 'package:restos/widgets/classificationView.dart';
 
 class MainPage extends StatelessWidget {
-  List<int> sampleList = [1, 2, 3, 4, 5];
-
   @override
   Widget build(BuildContext context) {
     Widget image_carousel = Carousels_image();
@@ -18,16 +17,30 @@ class MainPage extends StatelessWidget {
         body: Column(
           children: <Widget>[
             image_carousel,
-            Expanded(
-                child: ListView.builder(
-              scrollDirection: Axis.vertical,
-              itemCount: sampleList.length,
-              shrinkWrap: true,
-              itemBuilder: (context, index) {
-                return ClassififationsView();
-              },
-            )),
+            ClassificationListView(classificationList: fetchData()),
           ],
         ));
+  }
+}
+
+class ClassificationListView extends StatelessWidget {
+  final List<Classification> classificationList;
+
+  const ClassificationListView({
+    Key? key,
+    required this.classificationList,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+        child: ListView.builder(
+      scrollDirection: Axis.vertical,
+      itemCount: classificationList.length,
+      shrinkWrap: true,
+      itemBuilder: (context, index) {
+        return ClassificationView(classificationList[index]);
+      },
+    ));
   }
 }
