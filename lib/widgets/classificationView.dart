@@ -21,13 +21,16 @@ class ClassificationView extends StatelessWidget {
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 10.0),
-                    child: Container(
-                      child: Text(
-                        classification.name,
-                        style: TextStyle(fontSize: 20.0),
-                      ),
+                    child: Row(
+                      children: <Widget>[
+                        Text(
+                          classification.name,
+                          style: TextStyle(fontSize: 20.0),
+                        ),
+                        Icon(Icons.arrow_right_sharp),
+                      ],
                     ),
-                  )
+                  ),
                 ],
               ),
               Column(
