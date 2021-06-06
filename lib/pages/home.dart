@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:restos/models/data.dart';
-import 'package:restos/widgets/carousel.dart';
+
 import 'package:restos/widgets/classificationView.dart';
 
-class MainPage extends StatelessWidget {
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget image_carousel = Carousels_image();
-
     return Scaffold(
         appBar: new AppBar(
           title: Text(
@@ -16,7 +14,6 @@ class MainPage extends StatelessWidget {
         ),
         body: Column(
           children: <Widget>[
-            image_carousel,
             ClassificationListView(classificationList: fetchData()),
           ],
         ));

@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:restos/pages/Home.dart';
+import 'package:restos/pages/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             title: const Text('Rs'),
           ),
           body: const HomePage(),*/
-          body: MainPage(),
+          body: Home(),
         ));
   }
 }
