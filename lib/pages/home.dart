@@ -34,7 +34,6 @@ class ClassificationListView extends StatelessWidget {
         child: ListView.builder(
       scrollDirection: Axis.vertical,
       itemCount: classificationList.length,
-      shrinkWrap: true,
       itemBuilder: (context, index) {
         return ClassificationView(classificationList[index]);
       },

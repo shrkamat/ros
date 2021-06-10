@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:restos/models/data.dart';
 import 'package:restos/widgets/itemView.dart';
@@ -13,41 +14,39 @@ class ClassificationView extends StatelessWidget {
       Padding(
           padding: EdgeInsets.only(left: 10),
           child: Container(
-            height: 230.0,
-            // color: Colors.grey,
+            height: 200.0,
             child: Column(children: <Widget>[
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 10.0),
+                    padding: EdgeInsets.fromLTRB(7.0, 7.0, 0.0, 6.0),
                     child: Row(
                       children: <Widget>[
                         Text(
                           classification.name,
-                          style: TextStyle(fontSize: 20.0),
+                          style: TextStyle(
+                              fontSize: 20.0, fontWeight: FontWeight.bold),
                         ),
-                        Icon(Icons.arrow_right_sharp),
+                        Icon(Icons.arrow_forward_rounded),
                       ],
                     ),
                   ),
                 ],
               ),
-              Column(
-                children: <Widget>[
-                  Container(
-                    height: 180.0,
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: classification.itemList.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return ItemView(classification.itemList[index]);
-                      },
-                    ),
-                  )
-                ],
-              )
+              //Column(
+              // children: <Widget>[
+              Container(
+                height: 140.0,
+                child: ListView.builder(
+                  //shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: classification.itemList.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ItemView(classification.itemList[index]);
+                  },
+                ),
+              ),
             ]),
           )),
     ]);
