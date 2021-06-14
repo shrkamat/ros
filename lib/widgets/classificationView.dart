@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:restos/models/data.dart';
 import 'package:restos/widgets/itemView.dart';
 
+import 'package:restos/config/constants.dart' as Constants;
+
 class ClassificationView extends StatelessWidget {
   final Classification classification;
 
@@ -14,7 +16,7 @@ class ClassificationView extends StatelessWidget {
       Padding(
           padding: EdgeInsets.only(left: 10),
           child: Container(
-            height: 200.0,
+            height: Constants.CLASSIFICATION_VIEW_HEIGHT,
             child: Column(children: <Widget>[
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -34,12 +36,9 @@ class ClassificationView extends StatelessWidget {
                   ),
                 ],
               ),
-              //Column(
-              // children: <Widget>[
               Container(
-                height: 140.0,
+                height: Constants.CLASSIFICATION_VIEW_HEIGHT,
                 child: ListView.builder(
-                  //shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemCount: classification.itemList.length,
                   itemBuilder: (BuildContext context, int index) {

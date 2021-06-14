@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restos/models/data.dart';
-
+import 'package:restos/widgets/Switch.dart';
 import 'package:restos/widgets/classificationView.dart';
 
 class Home extends StatelessWidget {
@@ -14,6 +14,7 @@ class Home extends StatelessWidget {
         ),
         body: Column(
           children: <Widget>[
+            SwitchWidget(),
             ClassificationListView(classificationList: fetchData()),
           ],
         ));
