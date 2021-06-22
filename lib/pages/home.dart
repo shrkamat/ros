@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:restos/models/data.dart';
 import 'package:restos/widgets/Switch.dart';
 import 'package:restos/widgets/classificationView.dart';
+import 'package:restos/widgets/itemView.dart';
 
 class Home extends StatelessWidget {
   @override

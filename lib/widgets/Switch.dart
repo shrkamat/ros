@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-
 import 'package:flutter/material.dart';
 
 class SwitchWidget extends StatefulWidget {
@@ -9,6 +8,7 @@ class SwitchWidget extends StatefulWidget {
 
 class SwitchWidgetClass extends State {
   bool switchControl = false;
+  bool isveg = true;
   var textHolder = 'Veg only';
 
   void toggleSwitch(bool value) {
@@ -17,6 +17,9 @@ class SwitchWidgetClass extends State {
         switchControl = true;
         textHolder = 'Veg Only';
       });
+
+      //ItemView(classification.itemList[2]);
+
       // Put your code here which you want to execute on Switch ON event.
 
     } else {
