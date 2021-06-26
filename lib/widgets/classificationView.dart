@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:restos/models/data.dart';
-import 'package:restos/widgets/Switch.dart';
 import 'package:restos/widgets/itemView.dart';
 
 import 'package:restos/config/constants.dart' as Constants;
@@ -12,10 +11,6 @@ class ClassificationView extends StatelessWidget {
   ClassificationView(this.classification);
 
   @override
-  bool switchControl = false;
-  bool isveg = false;
-  var textHolder = 'Veg only';
-
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
