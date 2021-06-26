@@ -18,15 +18,10 @@ class SwitchWidgetClass extends State {
         switchControl = true;
         textHolder = 'Veg Only';
       });
-
-      // Put your code here which you want to execute on Switch ON event.
-
     } else {
       setState(() {
         switchControl = false;
-        // textHolder = 'Switch is OFF';
       });
-      // Put your code here which you want to execute on Switch OFF event.
     }
   }
 
