@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:restos/config/constants.dart' as Constants;
+
 class SwitchWidget extends StatefulWidget {
   @override
   SwitchWidgetClass createState() => new SwitchWidgetClass();
@@ -18,8 +20,6 @@ class SwitchWidgetClass extends State {
         textHolder = 'Veg Only';
       });
 
-      //ItemView(classification.itemList[2]);
-
       // Put your code here which you want to execute on Switch ON event.
 
     } else {
@@ -36,24 +36,25 @@ class SwitchWidgetClass extends State {
     return Container(
       alignment: Alignment.topLeft,
       child: Row(
-          //mainAxisAlignment: MainAxisAlignment.center,
+        //mainAxisAlignment: MainAxisAlignment.center,
 
-          children: [
-            Text(
-              '$textHolder',
-              style: TextStyle(fontSize: 10),
-            ),
-            Transform.scale(
-                scale: 1,
-                child: Switch(
-                  onChanged: toggleSwitch,
-                  value: switchControl,
-                  activeColor: Colors.blue,
-                  activeTrackColor: Colors.green,
-                  inactiveThumbColor: Colors.white,
-                  inactiveTrackColor: Colors.grey,
-                )),
-          ]),
+        children: [
+          Text(
+            '$textHolder',
+            style: TextStyle(fontSize: 10),
+          ),
+          Transform.scale(
+              scale: 1,
+              child: Switch(
+                onChanged: toggleSwitch,
+                value: switchControl,
+                activeColor: Colors.blue,
+                activeTrackColor: Colors.green,
+                inactiveThumbColor: Colors.white,
+                inactiveTrackColor: Colors.grey,
+              )),
+        ],
+      ),
     );
   }
 }
